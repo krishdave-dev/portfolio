@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .neon-text {
+    @apply relative;
+    text-shadow: 0 0 10px rgba(234, 179, 8, 0.5),
+                 0 0 20px rgba(234, 179, 8, 0.3),
+                 0 0 30px rgba(234, 179, 8, 0.2);
+  }
+
+  .neon-button {
+    @apply relative overflow-hidden;
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+  }
+
+  .neon-button::before {
+    content: '';
+    @apply absolute inset-0 bg-yellow-500 opacity-0;
+    filter: blur(10px);
+    transition: opacity 0.3s;
+  }
+
+  .neon-button:hover::before {
+    @apply opacity-20;
+  }
+
+  .neon-button-outline {
+    @apply relative overflow-hidden;
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.2);
+  }
+
+  .neon-button-outline::before {
+    content: '';
+    @apply absolute inset-0 bg-yellow-500 opacity-0;
+    filter: blur(10px);
+    transition: opacity 0.3s;
+  }
+
+  .neon-button-outline:hover::before {
+    @apply opacity-10;
+  }
+}
+
+/* Custom cursor */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #eab308;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-ring {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(234, 179, 8, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-yellow-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow-600;
+}
