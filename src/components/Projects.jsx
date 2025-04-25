@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-
+import StudySphere from '../assets/StudySphere.jpeg';
+import MindHaven from '../assets/MindHaven.jpeg';
+import Zelbi from '../assets/Zelbi.jpeg';
 const Projects = ({ onMouseEnter, onMouseLeave }) => {
   const projects = [
     {
@@ -7,21 +9,21 @@ const Projects = ({ onMouseEnter, onMouseLeave }) => {
       description: 'MERN-based EdTech platform with video lectures, course browsing, and user authentication.',
       link: '#',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: './src/assets/StudySphere.jpeg',
+      image: StudySphere,
     },
     {
       title: 'MindHaven – Mental Health Support App',
       description: 'Flutter app for mental health assessment and mood tracking with AI-powered insights.',
       link: '#',
       technologies: ['Flutter', 'Supabase', 'AI/ML'],
-      image: './src/assets/MindHaven.jpeg',
+      image: MindHaven,
     },
     {
       title: 'Zelbi – Stock Prediction Website',
       description: 'Stock prediction website using MERN stack and machine learning models for accurate forecasts.',
       link: '#',
       technologies: ['React', 'Node.js', 'Python', 'ML'],
-      image: './src/assets/Zelbi.jpeg',
+      image: Zelbi,
     },
   ];
 

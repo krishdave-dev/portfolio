@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-
+import me from '../assets/me.jpeg'
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -96,7 +96,7 @@ const Hero = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-yellow-500/20 dark:border-yellow-500/30">
                 {/* Replace the src with your image path */}
                 <img
-                  src=".\src\assets\me.jpeg"
+                  src={me}
                   alt="Krish Dave"
                   className="w-full h-full object-cover"
                 />
