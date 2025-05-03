@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -34,6 +35,10 @@ function App() {
       window.removeEventListener('mousemove', mouseMove);
     };
   }, []);
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+  }, [])
 
   const variants = {
     default: {

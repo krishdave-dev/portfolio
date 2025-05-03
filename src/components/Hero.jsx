@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import me from '../assets/me.jpeg'
+import resume from '../assets/Resume krish.pdf'
+
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -55,12 +57,14 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <motion.a
-                href="#contact"
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(234, 179, 8, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium hover:bg-yellow-600 transition-all duration-300 neon-button"
               >
-                Get in Touch
+                View Resume
               </motion.a>
               <motion.a
                 href="#projects"
@@ -94,7 +98,6 @@ const Hero = () => {
                 }}
               />
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-yellow-500/20 dark:border-yellow-500/30">
-                {/* Replace the src with your image path */}
                 <img
                   src={me}
                   alt="Krish Dave"
@@ -102,7 +105,7 @@ const Hero = () => {
                 />
               </div>
               <motion.div
-                className="absolute -bottom-4 -right-4 bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium"
+                className="absolute -bottom-4 -right-4 bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium hidden md:block"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -113,8 +116,15 @@ const Hero = () => {
         </div>
 
         {/* Tech Stack */}
-        
-
+        <div className="mt-8 md:mt-16">
+          <motion.div
+            className="absolute -bottom-4 -right-4 bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium md:hidden"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Available for work
+          </motion.div>
+        </div>
       </div>
     </section>
   )
